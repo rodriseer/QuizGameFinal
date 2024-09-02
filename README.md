@@ -21,7 +21,6 @@ MySQL Server
   6. Open the project in your preferred IDE (I've used IntelliJ IDEA to develop this project).
   7. Compile and run the App.java file to start the application.
 
-# Usage
 # Running the Application
 Launch the Application:
 Upon running the App.java class, the title screen will appear.
