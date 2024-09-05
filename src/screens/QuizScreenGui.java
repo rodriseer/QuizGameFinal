@@ -77,8 +77,8 @@ public class QuizScreenGui extends JFrame implements ActionListener{
         questionTextArea.setLineWrap(true);
         questionTextArea.setWrapStyleWord(true);
         questionTextArea.setEditable(false);
-        questionTextArea.setForeground(CommonConstants.SOFT_GREY);
-        questionTextArea.setBackground(CommonConstants.DEEP_BLUE);
+        questionTextArea.setForeground(CommonConstants.NEUTRAL_WHITE);
+        questionTextArea.setBackground(CommonConstants.MINT_GREEN);
         add(questionTextArea);
 
         addAnswerComponents();
@@ -166,7 +166,7 @@ public class QuizScreenGui extends JFrame implements ActionListener{
 
         if(answerButton.getText().equals(correctAnswer.getAnswerText())){
             // correct answer highlight
-            answerButton.setBackground(CommonConstants.SOFT_PURPLE);
+            answerButton.setBackground(CommonConstants.DEEP_BLUE);
 
             if(!firstChoiceMade){
                 // update score
@@ -182,7 +182,7 @@ public class QuizScreenGui extends JFrame implements ActionListener{
             }
         }else{
             // incorrect answer
-            answerButton.setBackground(CommonConstants.DEEP_BLUE);
+            answerButton.setBackground(CommonConstants.RED);
         }
 
         // ensure score only updates on the first click
