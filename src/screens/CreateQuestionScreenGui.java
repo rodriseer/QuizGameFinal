@@ -31,7 +31,7 @@ public class CreateQuestionScreenGui extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         // set the background color here... make sure to put into practice what I've learned in UI/UX design
-        getContentPane().setBackground(CommonConstants.DEEP_BLUE);
+        getContentPane().setBackground(CommonConstants.LIGHT_ORANGE);
 
         answerRadioButtons = new JRadioButton[4];
         answerTextFields = new JTextField[4];
@@ -57,7 +57,7 @@ public class CreateQuestionScreenGui extends JFrame {
         questionTextArea = new JTextArea();
         questionTextArea.setFont(new Font("Arial", Font.BOLD, 16));
         questionTextArea.setBounds(50, 90, 310, 110);
-        questionTextArea.setForeground(CommonConstants.DEEP_BLUE);
+        questionTextArea.setForeground(CommonConstants.BLACK);
         questionTextArea.setLineWrap(true);
         questionTextArea.setWrapStyleWord(true);
         add(questionTextArea);
@@ -81,7 +81,7 @@ public class CreateQuestionScreenGui extends JFrame {
         submitButton.setFont(new Font("Arial", Font.BOLD, 16));
         submitButton.setBounds(300, 450, 262, 45);
         submitButton.setForeground(CommonConstants.DEEP_BLUE);
-        submitButton.setBackground(CommonConstants.SOFT_PURPLE);
+        submitButton.setBackground(CommonConstants.BLACK);
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
