@@ -37,7 +37,7 @@ public class TitleScreenGui extends JFrame{
 
     private void initializeGuiComponents(){
         // title label that displays the name of the game
-        JLabel titleLabel = new JLabel("Study Quiz Program By: Rodrigo Seer");
+        JLabel titleLabel = new JLabel("Study Quiz Program");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 36));
         titleLabel.setBounds(0, 20, 390, 43);
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
