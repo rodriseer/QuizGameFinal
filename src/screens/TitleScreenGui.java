@@ -49,7 +49,7 @@ public class TitleScreenGui extends JFrame{
         chooseCategoryLabel.setFont(new Font("Arial", Font.BOLD, 16));
         chooseCategoryLabel.setBounds(0, 90, 400, 20);
         chooseCategoryLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        chooseCategoryLabel.setForeground(CommonConstants.SOFT_GREY);
+        chooseCategoryLabel.setForeground(CommonConstants.DEEP_BLUE);
         add(chooseCategoryLabel);
 
         // dropdown menu for category selection
@@ -64,7 +64,7 @@ public class TitleScreenGui extends JFrame{
         numOfQuestionsLabel.setFont(new Font("Arial", Font.BOLD, 16));
         numOfQuestionsLabel.setBounds(20, 190, 172, 20);
         numOfQuestionsLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        numOfQuestionsLabel.setForeground(CommonConstants.SOFT_PURPLE);
+        numOfQuestionsLabel.setForeground(CommonConstants.DEEP_BLUE);
         add(numOfQuestionsLabel);
 
         // text field to input the number of questions for the quiz
@@ -122,7 +122,7 @@ public class TitleScreenGui extends JFrame{
         createAQuestionButton.setFont(new Font("Arial", Font.BOLD, 16));
         createAQuestionButton.setBounds(65, 420, 262, 45);
         createAQuestionButton.setBackground(CommonConstants.SOFT_GREY);
-        createAQuestionButton.setForeground(CommonConstants.DEEP_BLUE);
+        createAQuestionButton.setForeground(CommonConstants.COOL_BLUE);
         createAQuestionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
