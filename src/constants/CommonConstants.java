@@ -9,4 +9,5 @@ public class CommonConstants {
     public static final Color SOFT_PURPLE = Color.decode("#A284D3");
     public static final Color NEUTRAL_WHITE = Color.decode("#FFFFFF");
     public static final Color RED = Color.decode("#FF0000");
+    public static final Color LIGHT_ORANGE = Color.decode("FFB266")
 }
