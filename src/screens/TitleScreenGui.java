@@ -29,8 +29,8 @@ public class TitleScreenGui extends JFrame{
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // set the background color to a soft grey to create a neutral and welcoming interface for the user
-        getContentPane().setBackground(CommonConstants.SOFT_GREY);
+        // set the background color to a light orange to create a neutral and welcoming interface for the user
+        getContentPane().setBackground(CommonConstants.LIGHT_ORANGE);
 
         initializeGuiComponents();
     }
