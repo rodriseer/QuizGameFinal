@@ -14,12 +14,13 @@ Java Development Kit (JDK) 8
 MySQL Server
 - Easy steps for installation:
   1. Download repo
-  2. Ensure MySQL is running on your machine.
-  3. Create a database named quiz_gui_db.
-  4. Import the provided SQL schema and data (if any) to set up your tables.
-  5. Update the JDBC class in the database package with your MySQL credentials.
-  6. Open the project in your preferred IDE (I've used IntelliJ IDEA to develop this project).
-  7. Compile and run the App.java file to start the application.
+  2. Download the required SQL connector, which can be found here: https://dev.mysql.com/downloads/file/?id=530070
+  3. Ensure MySQL is running on your machine.
+  4. Create a database named quiz_gui_db.
+  5. Import the provided SQL schema and data (if any) to set up your tables.
+  6. Update the JDBC class in the database package with your MySQL credentials.
+  7. Open the project in your preferred IDE (I've used IntelliJ IDEA to develop this project).
+  8. Compile and run the App.java file to start the application.
 
 # Running the Application
 Launch the Application:
