@@ -45,13 +45,13 @@ public class CreateQuestionScreenGui extends JFrame {
         JLabel titleLabel = new JLabel("Create your own Question");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setBounds(50, 15, 310, 29);
-        titleLabel.setForeground(CommonConstants.NEUTRAL_WHITE);
+        titleLabel.setForeground(CommonConstants.DEEP_BLUE);
         add(titleLabel);
 
         JLabel questionLabel = new JLabel("Question: ");
         questionLabel.setFont(new Font("Arial", Font.BOLD, 16));
         questionLabel.setBounds(50, 60, 93, 20);
-        questionLabel.setForeground(CommonConstants.NEUTRAL_WHITE);
+        questionLabel.setForeground(CommonConstants.COOL_BLUE);
         add(questionLabel);
 
         questionTextArea = new JTextArea();
@@ -65,7 +65,7 @@ public class CreateQuestionScreenGui extends JFrame {
         JLabel categoryLabel = new JLabel("Category: ");
         categoryLabel.setFont(new Font("Arial", Font.BOLD, 16));
         categoryLabel.setBounds(50, 250, 93, 20);
-        categoryLabel.setForeground(CommonConstants.SOFT_GREY);
+        categoryLabel.setForeground(CommonConstants.COOL_BLUE);
         add(categoryLabel);
 
         categoryTextField = new JTextField();
@@ -80,8 +80,8 @@ public class CreateQuestionScreenGui extends JFrame {
         JButton submitButton = new JButton("Submit");
         submitButton.setFont(new Font("Arial", Font.BOLD, 16));
         submitButton.setBounds(300, 450, 262, 45);
-        submitButton.setForeground(CommonConstants.DEEP_BLUE);
-        submitButton.setBackground(CommonConstants.BLACK);
+        submitButton.setForeground(CommonConstants.BLACK);
+        submitButton.setBackground(CommonConstants.COOL_BLUE);
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -121,7 +121,7 @@ public class CreateQuestionScreenGui extends JFrame {
         JLabel goBackLabel = new JLabel("Go Back");
         goBackLabel.setFont(new Font("Arial", Font.BOLD, 16));
         goBackLabel.setBounds(300, 500, 262, 20);
-        goBackLabel.setForeground(CommonConstants.SOFT_GREY);
+        goBackLabel.setForeground(CommonConstants.BLACK);
         goBackLabel.setHorizontalAlignment(SwingConstants.CENTER);
         goBackLabel.addMouseListener(new MouseAdapter() {
             @Override
@@ -137,6 +137,9 @@ public class CreateQuestionScreenGui extends JFrame {
         });
         add(goBackLabel);
     }
+
+
+
 
     private void addAnswerComponents(){
         // spacing between each answer input section
