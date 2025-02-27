@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 public class JDBC {
-    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/quiz_gui_db";
+    private static final String DB_URL = security reasons... wont provide;
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "47Nbm|}4B11=";
 
