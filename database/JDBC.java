@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 public class JDBC {
-    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/quiz_gui_db";
+    private static final String DB_URL = security reasons... wont provide;
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "47Nbm|}4B11=";
 
@@ -224,5 +224,29 @@ public class JDBC {
         }
 
         return false;
+    }
+
+    // delete all data from the db, inputs etc.
+    public static void clearAllData() {
+        try {
+            Connection connection = DriverManager.getConnection(
+                    DB_URL, DB_USERNAME, DB_PASSWORD
+            );
+
+            // disable foreign key checks for the current session to allow deletion
+            Statement stmt = connection.createStatement();
+            stmt.execute("SET FOREIGN_KEY_CHECKS = 0");
+
+            // delete data from dependent tables first
+           stmt.executeUpdate("DELETE FROM ANSWER");
+           stmt.executeUpdate("DELETE FROM QUESTION");
+           stmt.executeUpdate("DELETE FROM CATEGORY");
+
+            // re enable foreign keys check
+            stmt.execute("SET FOREIGN_KEY_CHECKS = 1");
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
 }

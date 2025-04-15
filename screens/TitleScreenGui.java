@@ -29,7 +29,7 @@ public class TitleScreenGui extends JFrame{
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // set the background color to a light orange to create a neutral and welcoming interface for the user
+        // set the background color to a soft grey to create a neutral and welcoming interface for the user
         getContentPane().setBackground(CommonConstants.LIGHT_ORANGE);
 
         initializeGuiComponents();
@@ -41,7 +41,7 @@ public class TitleScreenGui extends JFrame{
         titleLabel.setFont(new Font("Arial", Font.BOLD, 36));
         titleLabel.setBounds(0, 20, 390, 43);
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        titleLabel.setForeground(CommonConstants.SOFT_GREY);
+        titleLabel.setForeground(CommonConstants.DEEP_BLUE);
         add(titleLabel);
 
         // label instructing the user to choose a category
@@ -83,13 +83,13 @@ public class TitleScreenGui extends JFrame{
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(isUserInputValid()){
+                if (isUserInputValid()) {
 
                     // retrieve the selected category from the dropdown menu
                     Category category = JDBC.getCategory(categoriesMenu.getSelectedItem().toString());
 
                     // if the selected category is not valid, do nothing
-                    if(category == null) return;
+                    if (category == null) return;
 
                     int numOfQuestions = Integer.parseInt(numOfQuestionsTextField.getText());
 
@@ -103,7 +103,51 @@ public class TitleScreenGui extends JFrame{
                 }
             }
         });
+
         add(startButton);
+
+
+        JButton deleteButton = new JButton("Delete Data");
+        deleteButton.setFont(new Font("Arial", Font.BOLD, 8));
+        deleteButton.setBounds(115, 480, 165, 25);
+        deleteButton.setBackground(CommonConstants.SOFT_GREY);
+        deleteButton.setForeground(CommonConstants.RED);
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // confirmation option for user
+                int userResponse = JOptionPane.showConfirmDialog(
+                        null,
+                        "Would you like to delete all data?",
+                        "Confirm Delete",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.WARNING_MESSAGE
+
+                );
+
+                // confirmation from user using JOptionPane
+                if(userResponse == JOptionPane.YES_OPTION) {
+                    JDBC.clearAllData();
+
+                    // updating categories list to reflect changes
+                    ArrayList<String> updatedCategoryList = JDBC.fetchAllCategories ();
+                    categoriesMenu.setModel(new DefaultComboBoxModel(updatedCategoryList.toArray()));
+
+                    JOptionPane.showMessageDialog(null, "Data has been deleted", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+                    categoriesMenu.revalidate();
+                    categoriesMenu.repaint();
+
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Data deletion canceled.", "Canceled", JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+        }
+
+        );
+        add(deleteButton);
 
         JButton exitButton = new JButton("Exit");
         exitButton.setFont(new Font("Arial", Font.BOLD, 16));

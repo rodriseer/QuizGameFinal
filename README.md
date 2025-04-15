@@ -6,7 +6,8 @@ QuizGameFinal is a simple quiz game application built using Java Swing for the G
 # Features
 - Create Quizzes
 - Play Quizzes
-- Score Tracking
+- Score and chances Tracking
+- Delete database data to start fresh
 - Database Integration
 
 # Installation
@@ -24,7 +25,7 @@ MySQL Server
 
 # Running the Application
 Launch the Application:
-Upon running the App.java class, the title screen will appear.
+Upon running the App.java class, and assuming you have all the neccessary files, the title screen will appear.
 
 Create a Quiz:
 Click "Create a Question" to create a new quiz.
@@ -39,4 +40,4 @@ Answer the questions as they appear and see your score at the end.
 Java: For core programming logic and GUI development.
 Swing: For building the graphical user interface.
 MySQL: For database management.
-Git
+Git for update and documentations control
